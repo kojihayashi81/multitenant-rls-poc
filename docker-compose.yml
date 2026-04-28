@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: rls_poc_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rls_poc
+      TZ: UTC
+    ports:
+      - "5432:5432"
+    volumes:
+      - rls_poc_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d rls_poc"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  rls_poc_db_data:
