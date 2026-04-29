@@ -8,7 +8,7 @@ export default defineConfig({
   schema: './src/db/schema/*',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.ADMIN_DATABASE_URL!,
+    url: process.env.MIGRATOR_DATABASE_URL!,
   },
   verbose: true,
   strict: true,
