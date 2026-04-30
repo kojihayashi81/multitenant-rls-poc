@@ -22,6 +22,13 @@
       "when": 1777440184008,
       "tag": "0002_create_roles",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1777450552616,
+      "tag": "0003_enable_rls",
+      "breakpoints": true
     }
   ]
 }
