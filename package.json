@@ -15,6 +15,7 @@
     "db:reset": "docker compose down -v && docker compose up -d",
     "db:logs": "docker compose logs -f db",
     "db:psql": "docker compose exec db psql -U postgres -d rls_poc",
+    "db:seed": "docker compose exec -T db psql -U postgres -d rls_poc -f /seeds/dev.sql",
     "test": "vitest run"
   },
   "dependencies": {
