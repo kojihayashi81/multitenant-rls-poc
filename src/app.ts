@@ -15,6 +15,11 @@ function instanceFromUrl(url: string): string {
 export function createApp() {
   const app = new Hono();
 
+  // 認証不要・常時 200 を返すヘルスチェック。Playwright の webServer.url
+  // 起動待ちプローブ（200-399 を ready とみなす）で使う。tenantContext を
+  // 適用しないため /posts より前にマウントする。
+  app.get('/health', (c) => c.json({ status: 'ok' }));
+
   app.route('/posts', postsRoutes);
 
   app.onError((err, c) => {
