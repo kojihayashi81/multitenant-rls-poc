@@ -49,10 +49,3 @@ README の「主な設計判断」に残してある。
 | E2E (out-of-process) | Playwright | `tests/e2e/cross-tenant.spec.ts` | 8 |
 | Security: RLS failsafe | vitest | `tests/security/rls-failsafe.test.ts` | 9 |
 | Security: header attack | vitest | `tests/security/header-attack.test.ts` | 7 |
-
-## 今後の候補（未着手）
-
-- CI（GitHub Actions で `pnpm typecheck` + `pnpm test` + `pnpm test:e2e`）
-- pagination / soft delete / audit log などの機能拡張
-- クライアント型共有（モノレポ化したときに `packages/api-types/` へ切り出し）
-- ADR（`docs/adr/`）として個別の意思決定を粒度を揃えて残す
