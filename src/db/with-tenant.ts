@@ -4,7 +4,7 @@ import { db } from "./client";
 
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
-const tenantIdSchema = z.uuidv7()
+export const tenantIdSchema = z.uuidv7('Invalid UUIDv7')
 
 export async function withTenant<T>(
   tenantId: string,
