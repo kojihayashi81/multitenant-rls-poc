@@ -15,9 +15,9 @@ import { resolve } from "node:path";
 import { Pool } from "pg";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { ZodError } from "zod";
-import { pool } from "../src/db/client";
-import { postsTable } from "../src/db/schema";
-import { withTenant } from "../src/db/with-tenant";
+import { pool } from "../../src/db/client";
+import { postsTable } from "../../src/db/schema";
+import { withTenant } from "../../src/db/with-tenant";
 
 const T1 = "01900000-0000-7000-8000-000000000001";
 const T2 = "01900000-0000-7000-8000-000000000002";
@@ -33,7 +33,7 @@ beforeAll(async () => {
     );
   }
 
-  const sqlPath = resolve(import.meta.dirname, "../src/db/seeds/dev.sql");
+  const sqlPath = resolve(import.meta.dirname, "../../src/db/seeds/dev.sql");
   const seedSql = readFileSync(sqlPath, "utf8");
 
   const adminPool = new Pool({ connectionString: adminUrl });
