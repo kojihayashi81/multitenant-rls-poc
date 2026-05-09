@@ -16,7 +16,8 @@
     "db:logs": "docker compose logs -f db",
     "db:psql": "docker compose exec db psql -U postgres -d rls_poc",
     "db:seed": "docker compose exec -T db psql -U postgres -d rls_poc -f /seeds/dev.sql",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@hono/node-server": "^2.0.0",
@@ -29,6 +30,7 @@
     "zod": "^4.4.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.0",
     "@types/pg": "^8.20.0",
     "drizzle-kit": "^0.31.10",
