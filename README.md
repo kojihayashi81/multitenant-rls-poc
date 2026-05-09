@@ -260,7 +260,7 @@ Code セッションの逐語）と **クリーンな仕様** は [docs/roadmap/
 | ID | やったこと | ログ |
 | --- | --- | --- |
 | M2 | 3 ロール構成（`postgres` / `migrator` / `app_user`）と権限分離 | [M2.md](./docs/roadmap/M2.md) |
-| M3 / M3_2 | RLS の `ENABLE` / `FORCE` と、コマンド別 `USING` / `WITH CHECK` ポリシー | [M3.md](./docs/roadmap/M3.md) / [M3_2.md](./docs/roadmap/M3_2.md) |
+| M3 | RLS の `ENABLE` + `FORCE` と、コマンド別 `USING` / `WITH CHECK` ポリシー | [M3.md](./docs/roadmap/M3.md) |
 | M4 | `withTenant` ヘルパ（トランザクション内 `set_config`）と DB 統合テスト | [M4.md](./docs/roadmap/M4.md) |
 | M5 | Hono ミドルウェア + posts CRUD + RFC 9457 Problem Details | [M5.md](./docs/roadmap/M5.md) |
 | M6 | 破壊テスト：越境攻撃マトリクス（Playwright E2E）+ RLS failsafe + ヘッダ攻撃面 | [M6.md](./docs/roadmap/M6.md) |

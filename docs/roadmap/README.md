@@ -19,8 +19,7 @@ PoC のマイルストン計画と実施記録。
 | --- | --- | --- | --- |
 | M1 | 初期スキーマ + Drizzle 設定 | （リポジトリ初期コミット） | ✅ 完了 |
 | M2 | 3 ロール構成 (`postgres` / `migrator` / `app_user`) | [M2.md](./M2.md) | ✅ 完了 |
-| M3 | RLS ポリシー（前半：`ENABLE` / `FORCE` 設計） | [M3.md](./M3.md) | ✅ 完了 |
-| M3_2 | RLS ポリシー（後半：コマンド別 `USING` / `WITH CHECK`） | [M3_2.md](./M3_2.md) | ✅ 完了 |
+| M3 | RLS ポリシー（`ENABLE` + `FORCE` とコマンド別 `USING` / `WITH CHECK`） | [M3.md](./M3.md) | ✅ 完了 |
 | M4 | `withTenant` ヘルパ + DB 統合テスト | [M4.md](./M4.md) | ✅ 完了 |
 | M5 | Hono ミドルウェア + 5 endpoint CRUD + RFC 9457 | [M5.md](./M5.md) | ✅ 完了 |
 | M6 | 破壊テスト（security + E2E） | [M6.md](./M6.md) | ✅ 完了 |
