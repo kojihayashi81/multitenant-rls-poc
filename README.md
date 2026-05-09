@@ -250,3 +250,17 @@ JSON:API のような業界慣例に近く、SSOT を強制可能にするため
 PoC にフロントが無いので、ブラウザバイナリは不要。Playwright を選んだのは
 「**実プロセスで起動した本物のサーバを実 HTTP で叩く**」黒箱層が欲しかったからで、
 将来 UI を足したときに同じランナーで `page` フィクスチャに拡張できる。
+
+## ドキュメント / マイルストン履歴
+
+PoC は M2〜M6 のマイルストン単位で進めた。各回の **設計議論の Q&A ログ**（Claude
+Code セッションの逐語）と **クリーンな仕様** は [docs/roadmap/](./docs/roadmap/) に。
+全体俯瞰と原案からの差分は [docs/roadmap/README.md](./docs/roadmap/README.md)。
+
+| ID | やったこと | ログ |
+| --- | --- | --- |
+| M2 | 3 ロール構成（`postgres` / `migrator` / `app_user`）と権限分離 | [M2.md](./docs/roadmap/M2.md) |
+| M3 / M3_2 | RLS の `ENABLE` / `FORCE` と、コマンド別 `USING` / `WITH CHECK` ポリシー | [M3.md](./docs/roadmap/M3.md) / [M3_2.md](./docs/roadmap/M3_2.md) |
+| M4 | `withTenant` ヘルパ（トランザクション内 `set_config`）と DB 統合テスト | [M4.md](./docs/roadmap/M4.md) |
+| M5 | Hono ミドルウェア + posts CRUD + RFC 9457 Problem Details | [M5.md](./docs/roadmap/M5.md) |
+| M6 | 破壊テスト：越境攻撃マトリクス（Playwright E2E）+ RLS failsafe + ヘッダ攻撃面 | [M6.md](./docs/roadmap/M6.md) |
